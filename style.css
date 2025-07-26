@@ -1,0 +1,230 @@
+/* ====== GLOBAL RESET ====== */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #1a1721;
+  color: white;
+  font-family: "Special Gothic Expanded One", sans-serif;;
+}
+
+/* ====== LAYOUT STRUCTURE ====== */
+#wrapper {
+  position: relative;
+  width: 100%;
+  height: auto; /* Let content determine height */
+}
+
+#content {
+  width: 100%;
+  overflow: visible;
+}
+
+#smooth-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* ====== TUNNEL PARAGRAPH SECTIONS ====== */
+.tunnel-paragraph {
+  position: sticky;
+  top: 0;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.tunnel-paragraph h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: white;
+
+}
+
+.tunnel-paragraph.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.tunnel-paragraph.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ====== TEXT STYLES ====== */
+h1, h2 {
+  font-family: Orbitron, sans-serif;
+}
+
+p {
+  font-family: Montserrat, sans-serif;
+}
+
+/* ====== SECTION TYPES ====== */
+.images {
+  padding-top: 60vh;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 150vh;
+  display: grid;
+  grid-template-columns: repeat(20, 2%);
+  grid-template-rows: repeat(30, 3%);
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.tt {
+  padding-top: 10vh;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 150vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  text-align: center;
+}
+
+/* ====== IMAGE GRID POSITIONS ====== */
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+img:nth-child(1) { grid-area: 1/1/6/8; }
+img:nth-child(2) { grid-area: 3/12/8/20; }
+img:nth-child(3) { grid-area: 9/5/13/15; }
+img:nth-child(4) { grid-area: 14/1/18/8; }
+img:nth-child(5) { grid-area: 16/12/20/19; }
+img:nth-child(6) { grid-area: 20/2/25/9; }
+img:nth-child(7) { grid-area: 22/11/24/20; }
+img:nth-child(8) { grid-area: 26/5/30/15; }
+
+/* ====== SCROLL TARGET ====== */
+.scrollTarget {
+  position: absolute;
+  height: 1000vh;
+  width: 1px;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* ====== VIGNETTE EFFECT ====== */
+.vignette-radial {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  pointer-events: none;
+  z-index: 11;
+}
+
+.vignette-radial::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, transparent 60%, black 140%);
+  pointer-events: none;
+}
+
+/* ====== INFINITY SVG ====== */
+.infinity {
+  width: 200px;
+  height: 100px;
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: drawInfinity 3s ease-in-out infinite, pulse 2s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px #ffffff);
+}
+
+@keyframes drawInfinity {
+  0%   { stroke-dashoffset: 600; }
+  50%  { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 600; }
+}
+
+
+
+
+
+/* ====== BUTTON STYLES ====== */
+.button {
+  width: 110px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  background-color: #a1ff14;
+  border-radius: 30px;
+  color: rgb(19, 19, 19);
+  font-weight: 600;
+  border: none;
+  padding-left: 8px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116);
+  cursor: pointer;
+  transition: background-color 0.5s, transform 0.2s;
+}
+
+.button:hover {
+  background-color: rgb(192, 255, 20);
+}
+
+.button:active {
+  transform: scale(0.97);
+}
+
+.svgIcon {
+  height: 25px;
+  transition: transform 1.5s;
+}
+
+.button:hover .svgIcon {
+  transform: rotate(250deg);
+}
+
+.bell path {
+  fill: rgb(19, 19, 19);
+}
+
+/* ====== CANVAS BACKDROP ====== */
+.experience {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -999;
+}
+
+/* ====== OPTIONAL: SECTION CLASS FOR OVERLAYS ====== */
+.section {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10;
+  transition: opacity 0.5s ease-in-out;
+  padding: auto 20px;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Space Tunnel Scroll</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+  <!-- JS Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/Draggable.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/CustomEase.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/InertiaPlugin.min.js"></script>
+  
+  <!-- Three.js Effects -->
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68819/EffectComposer.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68819/RenderPass.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68819/ShaderPass.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68819/CopyShader.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68819/LuminosityHighPassShader.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68819/UnrealBloomPass.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.157.0/examples/js/loaders/FontLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.157.0/examples/js/geometries/TextGeometry.js"></script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="content">
+      <div id="smooth-content">
+
+        <!-- SECTION 1 -->
+        <div class="tunnel-paragraph d-flex flex-column justify-content-center align-items-center text-center w-100 px-3" data-start="0.00" data-end="0.007">
+          <h2 class="display-1 text-white fw-bold mb-3">
+            L
+            <svg class="infinity" viewBox="0 0 200 100">
+              <path d="M30,50 C30,20 70,20 100,50 C130,80 170,80 170,50 C170,20 130,20 100,50 C70,80 30,80 30,50 Z"
+                    fill="none"
+                    stroke="rgb(192, 255, 20)"
+                    stroke-width="15"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"/>
+            </svg>
+            P
+          </h2>
+          <p class="lead text-white">WE MAKE ART.</p>
+
+        </div>
+
+        <!-- IMAGE SECTION -->
+        <div class="tunnel-paragraph" data-start="0.009" data-end="0.35">
+          <section class="skew images">
+            <img data-speed="0.8" src="https://images.unsplash.com/photo-1520271348391-049dd132bb7c?auto=format&fit=crop&w=400&q=80" alt="Image 1">
+            <img data-speed="0.9" src="https://images.unsplash.com/photo-1609166214994-502d326bafee?auto=format&fit=crop&w=400&q=80" alt="Image 2">
+            <img data-speed="1" src="https://images.unsplash.com/photo-1589882265634-84f7eb9a3414?auto=format&fit=crop&w=434&q=80" alt="Image 3">
+            <img data-speed="1.1" src="https://images.unsplash.com/photo-1514689832698-319d3bcac5d5?auto=format&fit=crop&w=434&q=80" alt="Image 4">
+            <img data-speed="0.9" src="https://images.unsplash.com/photo-1535207010348-71e47296838a?auto=format&fit=crop&w=300&q=80" alt="Image 5">
+            <img data-speed="1.2" src="https://images.unsplash.com/photo-1588007375246-3ee823ef4851?auto=format&fit=crop&w=400&q=60" alt="Image 6">
+            <img data-speed="0.8" src="https://images.unsplash.com/photo-1571450669798-fcb4c543f6a4?auto=format&fit=crop&w=400&q=60" alt="Image 7">
+            <img data-speed="1" src="https://images.unsplash.com/photo-1520271348391-049dd132bb7c?auto=format&fit=crop&w=400&q=80" alt="Image 8">
+          </section>
+        </div>
+
+        <!-- CONFERENCES -->
+<div class="tunnel-paragraph" data-start="0.009" data-end="0.55">
+  <section class="tt">
+    <h1 class="text-white display-5 para skew">We begin with questions, not answers.</h1>
+  </section>
+</div>
+
+<div class="tunnel-paragraph" data-start="0.009" data-end="0.70">
+  <section class="tt">
+    <h1 class="text-white display-5 para skew">Ideas form, take shape, break, and rebuild.</h1>
+  </section>
+</div>
+
+<div class="tunnel-paragraph" data-start="0.009" data-end="0.85">
+  <section class="tt">
+    <h1 class="text-white display-5 para skew">This is the loop. Discovery through iteration.</h1>
+  </section>
+</div>
+
+<!-- FINAL SECTION: BRAND SIGNATURE -->
+<div class="tunnel-paragraph d-flex flex-column justify-content-center align-items-center text-center w-100 px-3" data-start="0.009" data-end="1.00">
+  <h2 class="display-1 text-white fw-bold mb-3 skew">
+    L
+    <svg class="infinity" viewBox="0 0 200 100">
+      <path d="M30,50 C30,20 70,20 100,50 C130,80 170,80 170,50 C170,20 130,20 100,50 C70,80 30,80 30,50 Z"
+            fill="none"
+            stroke="rgb(192, 255, 20)"
+            stroke-width="15"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+    </svg>
+    P
+  </h2>
+  <p class="text-white fs-5 mb-4 skew">At <strong>Loop</strong>, we build with rhythm—designing experiences that evolve, adapt, and resonate.</p>
+  <button class="button">
+    <svg class="svgIcon" viewBox="0 0 512 512" height="2em" xmlns="http://www.w3.org/2000/svg">
+      <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path>
+    </svg>
+    Explore
+  </button>
+</div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <canvas class="experience"></canvas>
+  <audio src="sound.mp3" id="bgAudio"></audio>
+  <div class="scrollTarget"></div>
+  <div class="vignette-radial"></div>
+
+  <!-- JS -->
+  <script src="main.js"></script>
+  <script src="script2.js"></script>
+</body>
+</html>
