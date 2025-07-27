@@ -228,3 +228,78 @@ img:nth-child(8) { grid-area: 26/5/30/15; }
   transition: opacity 0.5s ease-in-out;
   padding: auto 20px;
 }
+
+
+/* ====== RESPONSIVE TYPOGRAPHY ====== */
+.tunnel-paragraph h1 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  padding: 0 1rem;
+}
+
+/* Final heading (infinity symbol area) */
+.display-1 {
+  font-size: clamp(2rem, 8vw, 5rem);
+}
+
+p {
+  font-size: clamp(1rem, 3vw, 1.25rem);
+}
+
+/* ====== BUTTON ====== */
+.button {
+  width: auto;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+}
+
+/* ====== IMAGE GRID — responsive fallback ====== */
+@media (max-width: 1024px) {
+  .images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 4rem 1rem;
+  }
+
+  .images img {
+    width: 45%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 768px) {
+  .images img {
+    width: 100%;
+  }
+
+  .tt, .tunnel-paragraph {
+    padding: 10vh 1rem;
+  }
+
+  .tunnel-paragraph h1 {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .button {
+    width: 100%;
+    justify-content: center;
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .svgIcon {
+    display: none;
+  }
+
+  .display-1 {
+    font-size: clamp(1.8rem, 10vw, 3rem);
+  }
+
+  .tunnel-paragraph {
+    padding: 6vh 1rem;
+  }
+}
