@@ -287,13 +287,14 @@ padding: 10px 20px;
 }
 
 /* ====== CANVAS BACKDROP ====== */
-.experience {
-  position: fixed;
+canvas.experience {
+  display: block;
+  position: fixed; /* Lock canvas to screen */
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  z-index: -999;
+    z-index: -999;
 }
 
 
