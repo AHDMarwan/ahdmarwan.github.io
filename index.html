@@ -5,13 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Space Tunnel Scroll</title>
   
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
-  <!-- JS Libraries -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
@@ -21,7 +20,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/CustomEase.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/InertiaPlugin.min.js"></script>
   
-  <!-- Three.js Effects -->
   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68819/EffectComposer.js"></script>
   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68819/RenderPass.js"></script>
   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68819/ShaderPass.js"></script>
@@ -30,99 +28,495 @@
   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68819/UnrealBloomPass.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.157.0/examples/js/loaders/FontLoader.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.157.0/examples/js/geometries/TextGeometry.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-  <div id="wrapper">
-    <div id="content">
-      <div id="smooth-content">
-
-        <!-- SECTION 1 -->
-        <div class="tunnel-paragraph d-flex flex-column justify-content-center align-items-center text-center w-100 px-3" data-start="0.00" data-end="0.007">
-          <h2 class="display-1 text-white fw-bold mb-3">
-            L
-            <svg class="infinity" viewBox="0 0 200 100">
-              <path d="M30,50 C30,20 70,20 100,50 C130,80 170,80 170,50 C170,20 130,20 100,50 C70,80 30,80 30,50 Z"
-                    fill="none"
-                    stroke="rgb(192, 255, 20)"
-                    stroke-width="15"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"/>
-            </svg>
-            P
-          </h2>
-          <p class="lead text-white">WE MAKE ART.</p>
-
-        </div>
-
-        <!-- IMAGE SECTION -->
-        <div class="tunnel-paragraph" data-start="0.009" data-end="0.35">
-          <section class="skew images">
-            <img data-speed="0.8" src="https://images.unsplash.com/photo-1520271348391-049dd132bb7c?auto=format&fit=crop&w=400&q=80" alt="Image 1">
-            <img data-speed="0.9" src="https://images.unsplash.com/photo-1609166214994-502d326bafee?auto=format&fit=crop&w=400&q=80" alt="Image 2">
-            <img data-speed="1" src="https://images.unsplash.com/photo-1589882265634-84f7eb9a3414?auto=format&fit=crop&w=434&q=80" alt="Image 3">
-            <img data-speed="1.1" src="https://images.unsplash.com/photo-1514689832698-319d3bcac5d5?auto=format&fit=crop&w=434&q=80" alt="Image 4">
-            <img data-speed="0.9" src="https://images.unsplash.com/photo-1535207010348-71e47296838a?auto=format&fit=crop&w=300&q=80" alt="Image 5">
-            <img data-speed="1.2" src="https://images.unsplash.com/photo-1588007375246-3ee823ef4851?auto=format&fit=crop&w=400&q=60" alt="Image 6">
-            <img data-speed="0.8" src="https://images.unsplash.com/photo-1571450669798-fcb4c543f6a4?auto=format&fit=crop&w=400&q=60" alt="Image 7">
-            <img data-speed="1" src="https://images.unsplash.com/photo-1520271348391-049dd132bb7c?auto=format&fit=crop&w=400&q=80" alt="Image 8">
-          </section>
-        </div>
-
-        <!-- CONFERENCES -->
-<div class="tunnel-paragraph" data-start="0.009" data-end="0.55">
-  <section class="tt">
-    <h1 class="text-white display-5 para skew">We begin with questions, not answers.</h1>
-  </section>
-</div>
-
-<div class="tunnel-paragraph" data-start="0.009" data-end="0.70">
-  <section class="tt">
-    <h1 class="text-white display-5 para skew">Ideas form, take shape, break, and rebuild.</h1>
-  </section>
-</div>
-
-<div class="tunnel-paragraph" data-start="0.009" data-end="0.85">
-  <section class="tt">
-    <h1 class="text-white display-5 para skew">This is the loop. Discovery through iteration.</h1>
-  </section>
-</div>
-
-<!-- FINAL SECTION: BRAND SIGNATURE -->
-<div class="tunnel-paragraph d-flex flex-column justify-content-center align-items-center text-center w-100 px-3" data-start="0.009" data-end="1.00">
-  <h2 class="display-1 text-white fw-bold mb-3 skew">
-    L
-    <svg class="infinity" viewBox="0 0 200 100">
-      <path d="M30,50 C30,20 70,20 100,50 C130,80 170,80 170,50 C170,20 130,20 100,50 C70,80 30,80 30,50 Z"
-            fill="none"
-            stroke="rgb(192, 255, 20)"
-            stroke-width="15"
-            stroke-linecap="round"
-            stroke-linejoin="round"/>
-    </svg>
-    P
-  </h2>
-  <p class="text-white fs-5 mb-4 skew">At <strong>Loop</strong>, we build with rhythm—designing experiences that evolve, adapt, and resonate.</p>
-  <button class="button">
-    <svg class="svgIcon" viewBox="0 0 512 512" height="2em" xmlns="http://www.w3.org/2000/svg">
-      <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path>
-    </svg>
-    Explore
-  </button>
-</div>
 
 
-      </div>
-    </div>
-  </div>
+
+
+
 
   <canvas class="experience"></canvas>
   <audio src="sound.mp3" id="bgAudio"></audio>
   <div class="scrollTarget"></div>
   <div class="vignette-radial"></div>
 
-  <!-- JS -->
-  <script src="main.js"></script>
+
+
+
+
+
+
+
+
+<!-- Header Section -->
+<nav class="navbar custom-navbar fixed-top text-white">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+    <a class="navbar-brand text-white fw-bold fs-4" href="#">
+      <svg class="infinity-brand" viewBox="0 0 200 100" width="80" height="40" aria-label="infinity loop">
+        <path
+          d="M30,50 C30,20 70,20 100,50 C130,80 170,80 170,50 C170,20 130,20 100,50 C70,80 30,80 30,50 Z"
+          fill="none"
+          stroke="rgb(192, 255, 20)"
+          stroke-width="15"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+
+    <!-- Custom Hamburger Button -->
+    <button class="btn2 p-0 m-0" id="hamburgerToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <div class="icon"></div>
+    </button>
+  </div>
+
+  <!-- Fullscreen Menu -->
+  <div id="mobileMenu" aria-hidden="true" tabindex="-1">
+    <a class="nav-link" href="#">Home</a>
+    <a class="nav-link" href="#">About</a>
+    <a class="nav-link" href="#">Services</a>
+    <a class="nav-link" href="#">Contact</a>
+  </div>
+</nav>
+
+<style>
+  .custom-navbar {
+    padding: 0.75rem 1.5rem;
+    z-index: 1100; /* above menu */
+  }
+
+  .btn2 {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 1200; /* above menu */
+  }
+
+  .btn2 .icon {
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    top: 50%;
+    left: 0;
+    background-color: #ffffff;
+    transform: translateY(-50%);
+    transition: 0.3s;
+  }
+
+  .btn2 .icon::before,
+  .btn2 .icon::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background-color: #fff;
+    transition: 0.3s;
+  }
+
+  .btn2 .icon::before {
+    top: -12px;
+  }
+
+  .btn2 .icon::after {
+    top: 12px;
+  }
+
+  .btn2.open .icon {
+    background-color: transparent;
+  }
+
+  .btn2.open .icon::before {
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+
+  .btn2.open .icon::after {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+
+  /* Fullscreen menu styles */
+  #mobileMenu {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #a1ff14;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+    z-index: 1111;
+    pointer-events: auto;
+  }
+
+  #mobileMenu.open {
+    transform: translateY(0);
+  }
+
+#mobileMenu a {
+  color: #000000;
+  font-size: 4rem;
+  font-family: var(--font-primary);
+  margin: 1rem 0;
+  text-decoration: none;
+  transition: 
+    color 0.3s ease, 
+    font-weight 0.3s ease, 
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#mobileMenu a:hover {
+  font-weight: bold;
+  transform: scale(1.1);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+
+</style>
+
+<script>
+  const toggleBtn = document.getElementById("hamburgerToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  toggleBtn.addEventListener("click", () => {
+    const isOpen = toggleBtn.classList.toggle("open");
+    mobileMenu.classList.toggle("open");
+
+    // Accessibility attributes
+    toggleBtn.setAttribute("aria-expanded", isOpen);
+    mobileMenu.setAttribute("aria-hidden", !isOpen);
+
+    // Focus management for keyboard users
+    if (isOpen) {
+      mobileMenu.querySelector("a").focus();
+    } else {
+      toggleBtn.focus();
+    }
+  });
+</script>
+
+
+
+
+
+
+
+<!-- Hero Section -->
+<section class="container mx-6 d-flex align-items-center justify-content-center min-vh-100" id="banner">
+  <div class="row">
+    <div class="col-md-8">
+      <h1 class="display-1 fw-bold text-white">Design flows in loops.</h1>
+      <p class="lead">
+        Where every line, every pixel, flows into the next — crafting experiences that are as infinite and evolving as the stories they tell.
+      </p>
+      <button type="button" class="button">
+        Connect with Us <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+    <div class="col-md-4 d-flex align-items-center justify-content-center">
+      <svg class="infinity mx-2" viewBox="0 0 200 100" width="80" height="40" aria-label="infinity loop">
+        <path
+          d="M30,50 C30,20 70,20 100,50 C130,80 170,80 170,50 C170,20 130,20 100,50 C70,80 30,80 30,50 Z"
+          fill="none"
+          stroke="rgb(192, 255, 20)"
+          stroke-width="15"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </div>
+  </div>
+</section>
+
+
+<!-- About Section -->
+<div class="d-flex align-items-center justify-content-center min-vh-100" id="skew">
+  <section class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="text-center text-white">
+          <span>Our Story</span>
+          <h2 class="display-5 fw-bold">About Us</h2>
+          <p class="lead">
+            At Loop, we believe design is a continuous journey — a cycle where creativity and purpose intertwine endlessly.  
+            Every project is part of an evolving story, where each element connects, flows, and returns, shaping experiences that resonate beyond the screen.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<!-- ScrollTrigger Demo Section -->
+ <div class='loader df aic jcc'>
+  <div>
+    <h1>Loading</h1>
+    <h2 class='loader--text'>0%</h2>
+  </div>
+</div>
+<div class="demo-wrapper">
+<header class="d-flex align-items-center justify-content-center" style="min-height: 50vh;">
+  <h1 class="display-5 fw-bold text-white text-center">The Loop of Creation</h1>
+</header>
+
+
+  <section class="demo-text">
+    <div class="wrapper text" style="color: #a1ff14;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+  </section>
+
+  <section class="demo-gallery">
+    <ul class="wrapper">
+      <li><img src="icps26.png" width="1240" height="874"></li>
+      <li><img src="icps26.png" width="1240" height="874"></li>
+      <li><img src="icps26.png" width="1240" height="874"></li>
+    </ul>
+  </section>
+
+    <section class="demo-gallery">
+    <ul class="wrapper">
+      <li><img src="icps26.png" width="1240" height="874"></li>
+      <li><img src="icps26.png" width="1240" height="874"></li>
+      <li><img src="icps26.png" width="1240" height="874"></li>
+    </ul>
+  </section>
+
+    <section class="demo-gallery">
+    <ul class="wrapper">
+      <li><img src="icps26.png" width="1240" height="874"></li>
+      <li><img src="icps26.png" width="1240" height="874"></li>
+      <li><img src="icps26.png" width="1240" height="874"></li>
+    </ul>
+  </section>
+
+  <section class="demo-text">
+    <div class="wrapper text text-white">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+  </section>
+</div>
+
+
+<div class="d-flex align-items-center justify-content-center min-vh-100" id="skew">
+  <section class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="text-center text-white">
+<span>Principles in Motion</span>
+<h2 class="display-5 fw-bold">Enduring Values</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  :root { font-size: 16px }
+@media (max-width: 500px) { :root { font-size: 14px } }
+
+::-moz-selection {
+  background: #a1ff14;
+  color: white;
+}
+
+::selection {
+  background: #a1ff14;
+  color: white;
+}
+
+
+img {
+  width: 100%;
+  height: auto;
+  background: #f0f0f0;
+}
+
+ul {
+  padding-left: 1rem;
+  list-style: none;
+}
+
+li {
+  flex-shrink: 0;
+  width: clamp(500px, 60vw, 800px);
+  padding-right: 1rem;
+}
+a {
+  text-decoration: none;
+}
+:-webkit-any-link { color: #4e9815; }
+
+:-moz-any-link { color: #4e9815; }
+
+:any-link { color: #4e9815; }
+
+.df {display: flex}
+.aic {align-items: center}
+.jcc {justify-content: center}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  color: white;
+}
+
+.demo-wrapper {
+  overflow: hidden;
+
+}
+
+.wrapper {
+  display: flex;
+}
+
+.demo-gallery:not(.last) {
+  padding-bottom: 1rem;
+}
+
+.demo-text .text {
+  font-size: clamp(8rem, 15vw, 16rem);
+  line-height: 1;
+  font-weight: 900;
+}
+</style>
+
+<!-- Add imagesLoaded from CDN -->
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  const wrapper = document.querySelector('.demo-wrapper');
+  const loader = document.querySelector('.loader');
+  const loaderText = document.querySelector('.loader--text');
+
+  // Initially disable scrolling
+  document.body.style.overflow = 'hidden';
+
+  // Wait for all images inside the wrapper to load
+  imagesLoaded(wrapper, { background: true })
+    .on('progress', (instance, image) => {
+      const progress = (instance.progressedCount / instance.images.length) * 100;
+      loaderText.textContent = `${Math.round(progress)}%`;
+    })
+    .on('always', () => {
+      // Fade out and remove loader
+      gsap.to(loader, {
+        autoAlpha: 0,
+        duration: 0.5,
+        onComplete: () => loader.remove()
+      });
+
+      // Enable scrolling again
+      document.body.style.overflow = 'auto';
+
+      // Scroll to top
+      window.scrollTo(0, 0);
+
+      // Call animation setup
+      showDemo();
+    });
+
+  // Animate horizontal scroll inside each section
+  function showDemo() {
+    wrapper.querySelectorAll('section').forEach((section, index) => {
+      const w = section.querySelector('.wrapper');
+      if (!w) return;
+
+      const [xStart, xEnd] = (index % 2 === 1)
+        ? ['100%', (w.scrollWidth - section.offsetWidth) * -1]
+        : [w.scrollWidth * -1, 0];
+
+      gsap.fromTo(w, { x: xStart }, {
+        x: xEnd,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: section,
+          scrub: 0.5,
+          // markers: true, // uncomment to debug triggers
+          start: "top bottom",
+          end: "bottom top"
+        }
+      });
+    });
+  }
+</script>
+
+
+
+<footer class="py-4" id="theend">
+  <div class="container">
+    <div class="row justify-content-between pt-4 pb-3 pb-lg-5">
+      <!-- Column 1: Logo + Description -->
+      <div class="col-12 col-lg-5 mb-4 mb-lg-0">
+        <a href="#">
+          <svg class="infinity-brand mb-3" viewBox="0 0 200 100" width="80" height="40" aria-label="infinity loop">
+            <path
+              d="M30,50 C30,20 70,20 100,50 C130,80 170,80 170,50 C170,20 130,20 100,50 C70,80 30,80 30,50 Z"
+              fill="none"
+              stroke="rgb(192, 255, 20)"
+              stroke-width="15"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <p class="mb-0 text-white">
+          We design in cycles, not straight lines — shaping digital spaces where form, meaning, and motion align.
+        </p>
+      </div>
+
+      <!-- Column 2: Contact Info -->
+      <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+        <p class="mb-1 text-white">Mountain View</p>
+        <p class="mb-1 text-white">California, United States</p>
+        <p class="mb-1 text-white">Tel: +1 123-456-7890</p>
+        <p class="mb-0">
+          <a class="text-white text-decoration-none" href="mailto:hello@yourdomain.com">hello@yourdomain.com</a>
+        </p>
+      </div>
+
+      <!-- Column 3: Navigation Links -->
+      <div class="col-12 col-lg-3 text-lg-end">
+        <p class="mb-1"><a class="text-white text-decoration-none" href="#">Home</a></p>
+        <p class="mb-1"><a class="text-white text-decoration-none" href="#">Insights</a></p>
+        <p class="mb-1"><a class="text-white text-decoration-none" href="#">Studio</a></p>
+        <p class="mb-0"><a class="text-white text-decoration-none" href="#">Contact</a></p>
+      </div>
+    </div>
+
+    <div class="border-top my-3"></div>
+
+    <!-- Bottom Bar -->
+    <div class="d-lg-flex justify-content-between align-items-center py-2 small">
+      <div class="text-white mb-2 mb-lg-0">
+        © 2025 Loop. All rights reserved. 
+        <a class="text-muted ms-3" href="#">Privacy Policy</a>
+        <a class="text-muted ms-3" href="#">Terms of Service</a>
+      </div>
+      <div>
+        <a class="text-white" href="#">Crafted with rhythm and intention</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
   <script src="script2.js"></script>
 </body>
 </html>
