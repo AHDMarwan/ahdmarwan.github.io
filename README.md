@@ -1,21 +1,14 @@
-# Marwan Ait Haddou — Personal Website
+# Marwan Ait Haddou — Personal Research Website
 
-Personal academic website for Marwan Ait Haddou, focused on quantum machine learning, quantum information geometry, variational quantum algorithms, and parameterized quantum circuits.
+A lightweight personal website focused on quantum machine learning, quantum information geometry, variational quantum algorithms, and parameterized quantum circuits.
 
-## Website sections
+## Stack
 
-- About
-- Research
-- Selected research projects
-- Scientific computing toolbox
-- Contact and collaboration links
+- Semantic HTML
+- Responsive CSS
+- Vanilla JavaScript
+- GitHub Pages
 
-## Featured research
+The current site is intentionally dependency-light and contains no build step.
 
-- Accessible Quantum Natural Gradient
-- Spectral Geometry of Accessible Quantum Tangents
-- Latent Geometry of Parameterized Quantum Circuits
-
-## Technology
-
-The site uses semantic HTML, responsive CSS, vanilla JavaScript, and GitHub Pages. It is intentionally lightweight and does not require a build system.
+Live site: https://ahdmarwan.github.io
